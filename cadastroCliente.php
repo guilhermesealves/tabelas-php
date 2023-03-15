@@ -33,7 +33,7 @@
                     <div class="col-md-10 ms-">
                         <form action="" method="post">
                             <div class="form-group">
-                                <input type="text" name="cpf" class="form-control" placeholder="CPF">
+                                <input type="number" name="cpf" class="form-control" placeholder="CPF">
                             </div>
                             <div class="form-group mt-1 ">
                                 <input type="text" name="nome" class="form-control" placeholder="Nome">
