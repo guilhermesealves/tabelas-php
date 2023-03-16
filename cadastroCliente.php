@@ -18,12 +18,51 @@
         padding-top: 30px;
         padding-left: 45px;
     }
+
+    button {
+        padding: 15px 25px;
+        border: unset;
+        border-radius: 15px;
+        color: #212121;
+        z-index: 1;
+        background: #e8e8e8;
+        position: relative;
+        font-weight: 1000;
+        font-size: 17px;
+        -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        transition: all 250ms;
+        overflow: hidden;
+    }
+
+    button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        border-radius: 15px;
+        background-color: #212121;
+        z-index: -1;
+        -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+        transition: all 250ms
+    }
+
+    button:hover {
+        color: #e8e8e8;
+    }
+
+    button:hover::before {
+        width: 100%;
+    }
 </style>
 
 <body>
 
     <div class="tudo">
-    <div class="title">
+        <div class="title">
             <h1>Cadastro novo usuário</h1>
         </div>
 
@@ -39,7 +78,7 @@
                                 <input type="text" name="nome" class="form-control" placeholder="Nome">
                             </div>
                             <div class="form-group mt-1">
-                                <input type="email" name="email" class="form-control" placeholder="Bairro">
+                                <input type="text" name="email" class="form-control" placeholder="Bairro">
                             </div>
                             <div class="form-group mt-1">
                                 <input type="number" name="phone" class="form-control" placeholder="Numero">
@@ -48,10 +87,10 @@
                                 <input type="number" name="phone" class="form-control" placeholder="Cidade">
                             </div>
                             <div class="form-group mt-1">
-                                <input type="number" name="phone" class="form-control" placeholder="Estado">
+                                <input type="text" name="phone" class="form-control" placeholder="Estado">
                             </div>
                             <div class="form-group mt-1">
-                                <input type="number" name="phone" class="form-control" placeholder="Email">
+                                <input type="text" name="phone" class="form-control" placeholder="Email">
                             </div>
                             <div class="form-group mt-1">
                                 <input type="number" name="phone" class="form-control" placeholder="Phone">
@@ -61,8 +100,10 @@
                             </div>
                             <div class="mt-3">
                             </div>
+
                             <p class="small mt-3">
-                                <button>sdsds</button>
+                                <a href=""> <button>Cadastrar</button>
+                                </a>
 
                             </p>
                         </form>
